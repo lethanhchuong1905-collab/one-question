@@ -1,0 +1,1 @@
+Đặt video của bạn vào assets/video.mp4 rồi tải toàn bộ thư mục lên GitHub.

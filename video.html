@@ -1,1 +1,74 @@
-<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"></head><body><video id="v" controls autoplay style="width:100%;height:100vh;object-fit:cover"><source src="assets/video.mp4" type="video/mp4"></video><script>document.getElementById('v').onended=()=>location='question.html';</script></body></html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Video</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:black;
+overflow:hidden;
+}
+
+video{
+width:100vw;
+height:100vh;
+object-fit:cover;
+}
+
+.skip{
+position:fixed;
+top:20px;
+right:20px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(8px);
+padding:12px 22px;
+border-radius:40px;
+color:white;
+cursor:pointer;
+font-size:18px;
+border:1px solid rgba(255,255,255,.3);
+}
+
+.skip:hover{
+background:#ff2d55;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<video id="video" autoplay controls>
+<source src="assets/video.mp4" type="video/mp4">
+</video>
+
+<div class="skip" onclick="nextPage()">
+Bỏ qua →
+</div>
+
+<script>
+
+const video=document.getElementById("video");
+
+video.onended=function(){
+window.location="question.html";
+}
+
+function nextPage(){
+window.location="question.html";
+}
+
+</script>
+
+</body>
+</html>
